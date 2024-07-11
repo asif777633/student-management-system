@@ -8,8 +8,8 @@ def HOME(request):
 def NOTIFICATIONS(request):
     staff = Staff.objects.filter(admin = request.user.id)
     for i in staff:
-        staf_id = i.id
-        notification = Staff_Notification.objects.filter(staff_id = staf_id)
+        staff_id = i.id
+        notification = Staff_Notification.objects.filter(staff_id = staff_id)
 
         context = {
             'notification' : notification,
