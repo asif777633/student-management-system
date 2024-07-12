@@ -42,6 +42,14 @@
                   <li><a href="{% url 'view_subject' %}">View Subject </a></li>
                </ul>
             </li>
+
+            <li class="submenu">
+               <a href="#"><i class="fas fa-book-reader"></i> <span> Exam Question</span> <span class="menu-arrow"></span></a>
+               <ul>
+                  <li><a href="{% url 'exam-add' %}">Create Question </a></li>
+                  <li><a href="{% url 'exam-list' %}">View Questions </a></li>
+               </ul>
+            </li>
             <li class="submenu {% active_link 'add_session' 'active' %} {% active_link 'view_session' 'active' %}">
                <a href="#"><i class="fas fa-comment-dollar"></i> <span> Session</span> <span class="menu-arrow"></span></a>
                <ul>

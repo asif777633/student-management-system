@@ -1,6 +1,6 @@
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -61,6 +61,9 @@ urlpatterns = [
     path('Staff/Notification',Staff_Views.NOTIFICATIONS,name = 'notification'),
     path('Staff/mark_as_done/<str:status',Staff_Views.STAFF_NOTIFICATION_MARK_AS_DONE,name='staff_notification_mark_as_done'),
 
+
+    # question url
+    path('question/', include('question.urls')),
 
 
 

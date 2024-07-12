@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'active_link',
+    'question'
 ]
 
 MIDDLEWARE = [
