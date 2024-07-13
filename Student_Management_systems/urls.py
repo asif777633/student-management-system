@@ -54,6 +54,8 @@ urlpatterns = [
     path('Hod/Staff/save_notification',Hod_views.SAVE_NOTIFICATION,name='save_staff_notification'),
 
     path('Hod/Staff/Leave', Hod_views.STAFF_LEAVE_VIEW, name='staff_leave_view'),
+    path("Hod/Staff/approve_leave/<str:id>",Hod_views.STAFF_APPROVE_LEAVE,name = 'staff_approve_leave'),
+    path("Hod/Staff/disapprove_leave/<str:id>",Hod_views.STAFF_DISAPPROVE_LEAVE,name = 'staff_disapprove_leave'),
 
 
 

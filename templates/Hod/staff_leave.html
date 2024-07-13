@@ -39,22 +39,28 @@
                         </tr>
                      </thead>
                      <tbody>
-                        {% for i in course %}
+                        {% for i in staff_leave %}
                         <tr>
                            <td>{{i.id}}</td>
 
-                           <td>{{i.name}}</td>
+                           <td>{{i.staff_id.admin.first_name}}</td>
 
-                           <td>{{i.created_at}}</td>
-                           <td>{{i.updated_at}}</td>
+                           <td>{{i.date}}</td>
+                           <td>{{i.message}}</td>
+
                            <td class="text-right">
                               <div class="actions">
-                                 <a href="{% url 'eidt_course' i.id %}" class="btn btn-sm bg-success-light mr-2">
-                                 <i class="fas fa-pen"></i>
-                                 </a>
-                                 <a href="{% url 'delete_course' i.id %}" class="btn btn-sm bg-danger-light">
-                                 <i class="fas fa-trash"></i>
-                                 </a>
+                                 {% if i.status == 0 %}
+                                 <a href="{% url 'staff_approve_leave' i.id %}"class="btn btn-success">Approve</a>
+                                 <a href="{% url 'staff_disapprove_leave' i.id %}"class="btn btn-danger">Disapprove</a>
+
+                                 {% elif i.status == 1 %}
+                                 <button class="btn btn-success" disabled = "disabled">Approve</button>
+                                 {% else %}
+                                 <button class="btn btn-danger" disabled = "disabled">Disapprove</button>
+                                 {% endif %}
+
+
                               </div>
                            </td>
                         </tr>
