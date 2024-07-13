@@ -53,6 +53,9 @@ urlpatterns = [
     path('Hod/Staff/Send_Notification',Hod_views.STAFF_SEND_NOTIFICATION,name ='staff_send_notification'),
     path('Hod/Staff/save_notification',Hod_views.SAVE_NOTIFICATION,name='save_staff_notification'),
 
+    path('Hod/Staff/Leave', Hod_views.STAFF_LEAVE_VIEW, name='staff_leave_view'),
+
+
 
 
     #this is a Staff url
@@ -60,6 +63,9 @@ urlpatterns = [
     path('Staff/Home',Staff_Views.HOME,name = 'staff_home'),
     path('Staff/Notification',Staff_Views.NOTIFICATIONS,name = 'notification'),
     path('Staff/mark_as_done/<str:status',Staff_Views.STAFF_NOTIFICATION_MARK_AS_DONE,name='staff_notification_mark_as_done'),
+    path('Staff/Apply_leave',Staff_Views.STAFF_APPLY_LEAVE,name= 'staff_apply_leave'),
+    path('Staff/Apply_leave_save',Staff_Views.STAFF_APPLY_LEAVE_SAVE,name = 'staff_apply_leave_save'),
+
 
 
     # question url
