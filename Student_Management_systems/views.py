@@ -35,7 +35,7 @@ def doLogout(request):
     return redirect('login')
 
 def PROFILE(request):
-    user = CustomUser.objects.get(id = request.user.id)
+    user = CustomUser.objects.filter(id = request.user.id)
 
     context = {
         'user': user,
