@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <p class="text-center">Semester Details: {{ semester.name }}</p>
+    <p class="text-center"><strong>Program:</strong> {{ semester.program.name }}</p>
+    <p class="text-center"><strong>Department:</strong> {{ semester.department.dept_name }}</p>
+    
+    <p>Courses</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credits</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.course_code }}</td>
+                <td>{{ course.course_name }}</td>
+                <td>{{ course.credits }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <p class="text-right">Total Credits: {{ total_credits }}</p>
+</div>
+{% endblock %}

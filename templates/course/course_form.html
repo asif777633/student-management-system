@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="mt-5">
+  <h1 class="mb-4">{% if form.instance.pk %}Update Course{% else %}Create Course{% endif %}</h1>
+  <form method="post">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        {{ form.semester.label_tag }} {{ form.semester }}
+      </div>
+      <div class="col-md-6 mb-3">
+        {{ form.course_code.label_tag }} {{ form.course_code }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        {{ form.course_name.label_tag }} {{ form.course_name }}
+      </div>
+      <div class="col-md-6 mb-3">
+        {{ form.credits.label_tag }} {{ form.credits }}
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+{% endblock %}

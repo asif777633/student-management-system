@@ -27,19 +27,36 @@
 
                </ul>
             </li>
-            <li class="submenu {% active_link 'add_coures' 'active' %} {% active_link 'view_course' 'active' %}">
-               <a href="#"><i class="fas fa-building"></i> <span> Coures </span> <span class="menu-arrow"></span></a>
+            <li class="submenu">
+               <a href="#"><i class="fas fa-building"></i> <span> Program </span> <span class="menu-arrow"></span></a>
                <ul>
-                  <li><a href="{% url 'add_coures' %}">Add Coures </a></li>
-                  <li><a href="{% url 'view_course' %}">View Coures </a></li>
+                  <li><a href="{% url 'program_create' %}">Add Program </a></li>
+                  <li><a href="{% url 'program_list' %}">View program </a></li>
 
                </ul>
             </li>
-            <li class="submenu {% active_link 'add_subject' 'active' %} {% active_link 'view_subject' 'active' %}">
-               <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
+
+            <li class="submenu">
+               <a href="#"><i class="fas fa-building"></i> <span> Department </span> <span class="menu-arrow"></span></a>
                <ul>
-                  <li><a href="{% url 'add_subject' %}">Add Subject </a></li>
-                  <li><a href="{% url 'view_subject' %}">View Subject </a></li>
+                  <li><a href="{% url 'department_create' %}">Add Department </a></li>
+                  <li><a href="{% url 'department_list' %}">View Department </a></li>
+
+               </ul>
+
+            <li class="submenu">
+               <a href="#"><i class="fas fa-building"></i> <span> Semester </span> <span class="menu-arrow"></span></a>
+               <ul>
+                  <li><a href="{% url 'semester_create' %}">Add Semester </a></li>
+                  <li><a href="{% url 'semester_list' %}">View Semester </a></li>
+
+               </ul>
+            </li>
+            <li class="submenu">
+               <a href="#"><i class="fas fa-book-reader"></i> <span> Course</span> <span class="menu-arrow"></span></a>
+               <ul>
+                  <li><a href="{% url 'course_create' %}">Add Course </a></li>
+                  <li><a href="{% url 'course_list' %}">View course </a></li>
                </ul>
             </li>
 

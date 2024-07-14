@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="mt-5">
+  <h1 class="mb-4">{% if form.instance.pk %}Update Department{% else %}Create Department{% endif %}</h1>
+  <form method="post">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        {{ form.program.label_tag }} {{ form.program }}
+      </div>
+      <div class="col-md-6 mb-3">
+        {{ form.dept_name.label_tag }} {{ form.dept_name }}
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+{% endblock %}

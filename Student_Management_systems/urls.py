@@ -32,17 +32,17 @@ urlpatterns = [
     path('Hod/Staff/Update', Hod_views.UPDATE_STAFF,name='uptadte_staff'),
     path('Hod/Staff/Delete/<str:admin>', Hod_views.DELETE_STAFF,name='delete_staff'),
 
-    path('Hod/Course/Add',Hod_views.Add_COURSE,name = 'add_coures'),
-    path('Hod/Course/View', Hod_views.VIEW_COURSE, name='view_course'),
-    path('Hod/Course/Edit/<str:id>', Hod_views.EDIT_COURSE, name='eidt_course'),
-    path('Hod/Course/update', Hod_views.UPDATE_COURSE, name='update_course'),
-    path('Hod/Course/Delete/<str:id>', Hod_views.DELETE_COURSE, name='delete_course'),
+    # path('Hod/Course/Add',Hod_views.Add_COURSE,name = 'add_coures'),
+    # path('Hod/Course/View', Hod_views.VIEW_COURSE, name='view_course'),
+    # path('Hod/Course/Edit/<str:id>', Hod_views.EDIT_COURSE, name='eidt_course'),
+    # path('Hod/Course/update', Hod_views.UPDATE_COURSE, name='update_course'),
+    # path('Hod/Course/Delete/<str:id>', Hod_views.DELETE_COURSE, name='delete_course'),
 
-    path('Hod/Subject/Add', Hod_views.ADD_SUBJECT, name='add_subject'),
-    path('Hod/Subject/view',Hod_views.VIEW_SUBJECT,name = 'view_subject'),
-    path('Hod/Subject/edit/<str:id>',Hod_views.EDIT_SUBJECT,name= 'edit_subject'),
-    path('Hod/Subject/Update',Hod_views.UPDATE_SUBJECT, name = 'update_subject'),
-    path('Hod/Subject/Delete/<str:id>',Hod_views.DELETE_SUBJECT, name = 'delete_subject'),
+    # path('Hod/Subject/Add', Hod_views.ADD_SUBJECT, name='add_subject'),
+    # path('Hod/Subject/view',Hod_views.VIEW_SUBJECT,name = 'view_subject'),
+    # path('Hod/Subject/edit/<str:id>',Hod_views.EDIT_SUBJECT,name= 'edit_subject'),
+    # path('Hod/Subject/Update',Hod_views.UPDATE_SUBJECT, name = 'update_subject'),
+    # path('Hod/Subject/Delete/<str:id>',Hod_views.DELETE_SUBJECT, name = 'delete_subject'),
 
     path('Hod/Session/Add',Hod_views.ADD_SESSION,name= 'add_session'),
     path('Hod/Session/View,',Hod_views.VIEW_SESSION,name = 'view_session'),
@@ -72,7 +72,11 @@ urlpatterns = [
 
     # question url
     path('question/', include('question.urls')),
+    # 
 
+    # course url
+
+    path('course/', include('course.urls')),
 
 
 
